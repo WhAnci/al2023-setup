@@ -25,6 +25,15 @@ sudo mv kubectl /usr/bin/kubectl
 
 # Optional short alias
 sudo ln -sf /usr/bin/kubectl /usr/local/bin/k
+cat <<EOF >> ~/.bashrc
+alias ka="kubectl apply"
+alias kd="kubectl describe"
+alias kx="kubectl delete"
+alias kg="kubectl get"
+alias ke="kubectl edit"
+alias kc="kubectl create"
+EOF
 
+source ~/.bashrc
 # Verify
 k version --client
